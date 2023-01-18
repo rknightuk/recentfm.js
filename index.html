@@ -7,14 +7,15 @@
 
     <style>
         body {
+            padding: 10px;
             max-width: 800px;
             margin: 0 auto;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            font-size: 1.2em;
+            font-family: monospace;
+            font-size: 1.4em;
         }
 
         h1 {
-            margin-bottom: 0;
+            font-size: 2.2em;
         }
 
         .subtitle {
@@ -27,6 +28,10 @@
             height: 100px;
             font-size: 1.1em;
         }
+
+        .snippet {
+            background-color: #ffe066;
+        }
     </style>
 
     <title>omgnow.js - Embed your omg.lol now page on your website.</title>
@@ -34,13 +39,19 @@
 </head>
 
 <body>
-    <h1><code>omgnow.js</code></h1>
-    <p class="subtitle"><code>Embed your <omg.lol href="https://home.omg.lol/referred-by/robb">omg.lol</a> now page on your website.</code></p>
-    <p class="subtitle"><code>by <a href="https://rknight.me">Robb Knight</a></code></p>
+    <h1>omgnow.js</h1>
+    <p class="subtitle">Embed your <omg.lol href="https://home.omg.lol/referred-by/robb">omg.lol</a> now page on your website.</p>
+    <p class="subtitle">by <a href="https://rknight.me">Robb Knight</a></p>
 
-    <p>Add this to your page replacing <code>foorbar</code> with your omg.lol address:</p>
+    <p>Add this to your page replacing <code>foorbar with your omg.lol address:</p>
 
-    <p><code>&lt;script src="https://omgnow.rknight.me/now.js?a=<strong>foorbar</strong>&pretty"&gt;&lt;/script&gt;</code></p>
+    <p><code class="snippet">&lt;script src="https://omgnow.rknight.me/now.js?a=<strong>foorbar</strong>&pretty"&gt;&lt;/script&gt;</code></p>
+
+    <h2>See it in action on these wonderful sites:</h2>
+    <ul>
+        <li><a href="https://www.r0b.io">Rob</a></li>
+        <li><a href="https://sarajoy.dev">Sara</a></li>
+    </ul>
 
     <p>You can remove <code>&pretty</code> if you don't want any styles. To style it yourself:</p>
 
