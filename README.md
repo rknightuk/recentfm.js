@@ -1,8 +1,8 @@
-# omgnow.js
+# recentfm.js
 
-Embed your [omg.lol](https://home.omg.lol/referred-by/robb) now page on your website.
+Embed your most recently played track from Last.fm.
 
-[https://omgnow.rknight.me/](https://omgnow.rknight.me/)
+[https://recentfm.rknight.me/](https://recentfm.rknight.me/)
 
 ## Dev
 
