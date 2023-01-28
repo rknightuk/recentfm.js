@@ -1,6 +1,5 @@
 {
     "require": {
-        "nesbot/carbon": "^2.65",
-        "league/commonmark": "^2.3"
+        "vlucas/phpdotenv": "^5.5"
     }
 }

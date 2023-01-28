@@ -2,17 +2,17 @@ const nowCurrentScript = document.currentScript
 const urlParams = new URLSearchParams(nowCurrentScript.src.split('.js')[1])
 const params = Object.fromEntries(urlParams.entries())
 
-if (params.a)
+if (params.u)
 {
-    const style = params.pretty === '' ? 'background: #e7f5ff; padding: 10px; border-radius: 10px' : ''
-    const path = `https://omgnow.rknight.me/now.php?address=${params.a}`
+    const path = `https://recentfm.rknight.me/now.php?username=${params.u}`
     fetch(path)
     .then((response) => response.json())
     .then((data) => {
+        console.log(data)
         nowcontainer = document.createElement('div')
-        nowcontainer.className = 'now_container'
+        nowcontainer.className = 'recent-played'
         nowcontainer.style
-        nowcontainer.innerHTML = `<div class="now_content" style="${style}">${data.content}</div>`
+        nowcontainer.innerHTML = `${data.content}`
         nowCurrentScript.parentNode.insertBefore(nowcontainer, nowCurrentScript)
     })
 }
