@@ -34,31 +34,40 @@
         }
     </style>
 
-    <title>recentfm.js - Embed your most recently played track from Last.fm.</title>
+    <title>omgnow.js - Embed your omg.lol now page on your website.</title>
 
 </head>
 
 <body>
-    <h1>recentfm.js</h1>
-    <p class="subtitle">Embed your most recently played track from Last.fm</p>
+    <h1>omgnow.js</h1>
+    <p class="subtitle">Embed your <omg.lol href="https://home.omg.lol/referred-by/robb">omg.lol</a> now page on your website.</p>
     <p class="subtitle">by <a href="https://rknight.me">Robb Knight</a></p>
 
-    <p>Add this to your page replacing foobar with your last.fm username:</p>
+    <p>Add this to your page replacing <code>foorbar with your omg.lol address:</p>
 
-    <p><code class="snippet">&lt;script src="https://recentfm.rknight.me/now.js?u=<strong>foobar</strong>"&gt;&lt;/script&gt;</code></p>
+    <p><code class="snippet">&lt;script src="https://omgnow.rknight.me/now.js?a=<strong>foorbar</strong>&pretty"&gt;&lt;/script&gt;</code></p>
 
-    <p>To style it:</p>
+    <h2>See it in action on these wonderful sites:</h2>
+    <ul>
+        <li><a href="https://www.r0b.io">Rob</a></li>
+        <li><a href="https://sarajoy.dev#sara">Sara</a></li>
+    </ul>
+
+    <p>You can remove <code>&pretty</code> if you don't want any styles. To style it yourself:</p>
 
     <textarea readonly onclick="this.focus();this.select()">
-.recent-played {}
-.recent-played-track {}
+.now_container {}
+.now_content {}
+.now_before {} // everything before `--- Now ---`
+.now_after {} // everything after `--- Now ---`
+.now_updated {}
     </textarea>
 
     <p>Example:</p>
 
-    <script src="/now.js?u=rknightuk"></script>
+    <script src="/now.js?a=foobar&pretty"></script>
 
-    <a href="https://github.com/rknightuk/recentfm.js" class="github-corner" aria-label="View source on GitHub"><svg
+    <a href="https://github.com/rknightuk/omgnow.js" class="github-corner" aria-label="View source on GitHub"><svg
             width="80" height="80" viewBox="0 0 250 250"
             style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
             <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
