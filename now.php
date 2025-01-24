@@ -10,6 +10,9 @@ header("Content-Type: application/json");
 $username = $_GET['username'] ?? null; // todo if no username, send back Rick Astley
 $limit = $_GET['limit'] ?? 1;
 $emoji = $_GET['emoji'] ?? '🎧';
+$nomoji = isset($_GET['nomoji']) && $_GET['nomoji'] === 'true';
+
+$emojiString = $nomoji ? '' : "$emoji ";
 
 $apiKey = $_ENV['LASTFMKEY'];
 
@@ -22,8 +25,8 @@ if (!$username)
 
 $res = json_decode(file_get_contents("https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=$username&api_key=$apiKey&format=json&limit=$limit"));
 
-$formattedTracks = implode('', array_map(function($track) use ($emoji) {
-    return sprintf('<p class="recent-played-track">%s <a href="%s">%s by %s</a></p>', $emoji, $track->url, $track->name, $track->artist->{'#text'});
+$formattedTracks = implode('', array_map(function($track) use ($emojiString) {
+    return sprintf('<p class="recent-played-track">%s<a href="%s">%s by %s</a></p>', $emojiString, $track->url, $track->name, $track->artist->{'#text'});
 }, array_slice($res->recenttracks->track, 0, $limit)));
 
 echo json_encode(['content' => $formattedTracks]);

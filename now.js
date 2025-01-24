@@ -5,7 +5,8 @@ const params = Object.fromEntries(urlParams.entries())
 if (params.u)
 {
     const emoji = params.e ? params.e : '🎧'
-    const path = `https://recentfm.rknight.me/now.php?username=${params.u}&emoji=${emoji}`
+    const nomoji = params.nomoji ? true : false
+    const path = `https://recentfm.rknight.me/now.php?username=${params.u}&emoji=${emoji}&nomoji=${nomoji}`
     fetch(path)
     .then((response) => response.json())
     .then((data) => {
